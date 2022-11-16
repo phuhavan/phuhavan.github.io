@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "20 best conference(s)/journal(s) in Computer Hardware Design"
+title:  "20 best conferences and journals in Computer Hardware Design"
 date:   2022-11-16 14:18:06 +0200
 categories: top conference
 ---
