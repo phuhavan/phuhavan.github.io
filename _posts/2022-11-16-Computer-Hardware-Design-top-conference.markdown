@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "Top 20 best conference(s)/journal(s) in Computer Hardware Design"
+title:  "20 best conference(s)/journal(s) in Computer Hardware Design"
 date:   2022-11-16 14:18:06 +0200
 categories: top conference
 ---
-You find below the top 20 best conferences and journals in Conputer Hardware Design. The ranking was obtained by h5-index and h5-median. The data is cloned from [Google Scholar](https://scholar.google.com/citations?view_op=top_venues&hl=en&vq=eng_computerhardwaredesign) in 16-11-2022
+You find below top 20 conferences and journals in Conputer Hardware Design. The ranking was obtained by h5-index and h5-median. The data is cloned from [Google Scholar](https://scholar.google.com/citations?view_op=top_venues&hl=en&vq=eng_computerhardwaredesign) in 16-11-2022
 
 |    | Publication                                                                     | h5-index | h5-median |
 |:--:|---------------------------------------------------------------------------------|:--------:|:---------:|
