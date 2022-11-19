@@ -1,0 +1,10 @@
+---
+layout: post
+title:  "A new paper at Design Automation and Test in Europe (DATE) conference"
+date:   2022-11-19 14:18:06 +0200
+categories: top conference
+---
+I got a paper accepted at Design Automation and Test in Europe conference, as know as DATE 2023. The DATE conference is the premier European gathering of hardware and software designers, test engineers, and manufacturers of electronic circuits and systems, as well as researchers, suppliers, and consumers of design automation. DATE places a premium on both technology and systems, including integrated circuits/systems-on-chip (SoCs), reconfigurable hardware/embedded systems, and embedded systems/embedded software. 
+
+The abstract of the paper is mention as follows: 
+With the growing complexity of applications, designers need to fit more and more computing kernels into a limited energy or area budget. Therefore, improving the quality of results of applications in electronic devices with a constraint on its cost is becoming a critical problem. Word Length Optimization (WLO) is the process of determining bit-width for variables or operations represented using fixed-point arithmetic to trade-off between quality and cost. State-of-the-art approaches mainly solve WLO given a quality (accuracy) constraint. In this paper, we first show that existing WLO procedures are not adapted to solve the problem of optimizing accuracy given a cost constraint. It is then interesting and challenging to propose new methods to solve this problem. Then, we propose a Bayesian optimization based algorithm to maximize the quality of computations under a cost constraint (i.e., energy in this paper). Experimental results indicate that our approach outperforms conventional WLO approaches by improving the quality of the solutions by more than 170 %. 
