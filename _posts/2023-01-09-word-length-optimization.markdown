@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Word Length Optimization"
+title:  "Word Length Optimization in Computing at Edge devices"
 date:   2023-01-09 14:18:06 +0200
 categories: wlo
 ---
