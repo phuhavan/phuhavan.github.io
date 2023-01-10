@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Word Length Optimization"
-date:   2023-01-10 14:18:06 +0200
+date:   2023-01-09 14:18:06 +0200
 categories: wlo
 ---
 Word length optimization is a technique used in the design of digital circuits and systems to minimize the number of bits used to represent data and instructions. The goal of word length optimization is to find the smallest word length that can represent the data and instructions with a desired level of accuracy.
@@ -30,3 +30,39 @@ For example, in grayscale images the value of each pixel might vary between 0 an
 Another example of the use of word length optimization in image processing is the use of pruning in convolutional neural networks (CNNs) that are used for image classification. In a CNN, each layer of the network is composed of a large number of filters, each of which performs a convolution operation on the input image. Pruning techniques can be used to identify and remove filters that are not contributing significantly to the accuracy of the network, thus reducing the computational resources required to perform the convolution operations. This pruning can be applied to the filters or to the parameters of each filter and it can also reduce the energy consumption of the network.
 
 It's worth noting that in both example, the trade offs of using lower bit-width or pruning must be considered and a compromise between accuracy, performance and energy consumption must be found for the specific application and dataset.
+
+Here's an example of how word length optimization can be used to reduce the word length of the weights and activations in a convolutional neural network (CNN) implemented in Python:
+
+``` python
+import numpy as np
+
+# define a function to quantize weights and activations
+def quantize(data, bitwidth):
+    max_val = 2**(bitwidth-1)-1
+    min_val = -2**(bitwidth-1)
+    data = np.clip(data, min_val, max_val)
+    data = np.round(data)
+    data = data.astype(np.int)
+    return data
+
+# define the CNN architecture
+model = ...  # your CNN architecture
+
+# quantize the weights and activations
+for layer in model.layers:
+    if isinstance(layer, (Conv2D, Dense)):
+        layer.set_weights([quantize(w, bitwidth) for w in layer.get_weights()])
+
+# train the quantized model
+model.compile(...)
+model.fit(...)
+
+```
+
+This example demonstrates a simple way of reducing the bitwidth of the weights and activations in a CNN. The `quantize()` function takes a numpy array and a target bitwidth as input, and clips the values to the range `(-2^(b-1), 2^(b-1)-1)`, rounds the values to the nearest integer, and then cast the data type to integer with the specific bitwidth. Then this function is applied to the weights and activations of each layer of the model.
+
+It is worth noting that this is a simplified example and in a real scenario it will require more work to fine tune the system and analyze the trade offs between energy consumption, performance and accuracy.
+
+Also, some other techniques such as pruning and weight sharing can also be implemented to make the model more efficient.
+
+Also, as a warning, using lower bit widths can result in a degradation of model's performance, and finding the right balance of bit widths and performance is important.
